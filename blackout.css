@@ -1,0 +1,84 @@
+:root {
+    cursor: none;
+    --cursorX: 50vw;
+    --cursorY: 50vh;
+  }
+  :root:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    background: radial-gradient(
+      circle 10vmax at var(--cursorX) var(--cursorY),
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+  }
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: inherit;
+}
+  
+.wrapper {
+    background-color: rgba(58, 37, 6, 0.836);
+    color: rgb(252, 233, 198);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    box-shadow: 2px 30px 40px rgba(252, 225, 252, 0.603);
+}
+
+.list-item {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(156, 128, 92, 0.4);
+    padding: 20px;
+}
+
+.link {
+    font-size: 20px;
+    color: rgb(36, 33, 28);
+   
+    text-decoration: none;
+    box-shadow: 1px 3px 5px rgb(247, 161, 247),
+    inset -1px 2px 50px rgb(253, 247, 238, 0.3),
+    inset 3px 5px 10px rgba(247, 161, 247, 0.5);
+    width: 100%;
+}
+
+.sub-nav-list, .sub-sub-nav-list {
+    position: absolute;
+    top: 60px;
+    left: -20px;
+    display: block;
+    background-image: linear-gradient( rgba(252, 225, 225, 0.3)20%, rgba(156, 128, 92, 0.4));
+    box-shadow: inset 5px 15px 30px blueviolet,
+    6px 25px 50px rgba(137, 43, 226, 0.658);
+}
+
+
+.sub-list-item, .sub-sub-list-item {
+    display: none;
+    list-style-type: none;
+    padding: 20px;
+}
+
+
+.list-item:hover .sub-list-item {
+    display: block;
+}
+
+.sub-list-item:hover .sub-sub-list-item {
+    display: block;
+}

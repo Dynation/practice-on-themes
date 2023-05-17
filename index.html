@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link id="theme" rel="stylesheet" href="./style.css">
     <title>Document</title>
+    <script>
+        function toggleTheme(value) {
+            var sheets = document
+                .getElementsByTagName('link');
+  
+            sheets[0].href = value;
+        }
+    </script>
 </head>
 
 <body>
+    <div class="wrapper">
     <!-- 
         +1. Navigation
         +2. List items
@@ -26,7 +35,13 @@
                 <ul class="sub-nav-list">
                     <li class="sub-list-item"><a class="link" href="#">Resources</a></li>
                     <li class="sub-list-item"><a class="link" href="#">Links</a></li>
-                    <li class="sub-list-item"><a class="link" href="#">Tutorials +</a></li>
+                    <li class="sub-list-item"><a class="link" href="#">Tutorials +</a>
+                    <ul class="sub-sub-nav-list" >
+                        <li class="sub-sub-list-item" ><a class="link" href="#">HTML/CSS</a></li>
+                        <li class="sub-sub-list-item" ><a class="link" href="#">JQuery</a></li>
+                        <li class="sub-sub-list-item" ><a class="link" href="#">Other+</a></li>
+                    </ul>
+                </li>
                 </ul>
             </li>
             <li class="list-item"><a class="link" href="#">Graphic Design</a></li>
@@ -101,12 +116,15 @@
         eaque ipsum minus provident magni quos ipsam reiciendis nulla animi qui tempore accusamus cum quis debitis
         expedita? Non at quis rem optio totam dolores vero, eaque praesentium possimus consectetur sequi a dolor beatae
         inventore veniam tenetur magni. Reiciendis, esse rem hic sunt voluptate dolorum in quod? Magnam, unde enim
-        excepturi consequatur veniam deserunt doloribus eaque adipisci aliquid dolorem ex sapiente provident officiis
+        excepturi consequatur veniam deserunt doloribus<button class="toggle" onclick="toggleTheme('./blackout.css')" >Switch to BLACKOUT theme</button> 
+        <button class="toggle" onclick="toggleTheme('./style.css')" >Switch to NORMAL theme</button>eaque adipisci aliquid dolorem ex sapiente provident officiis
         exercitationem deleniti odio. Impedit, quasi dolor similique eveniet voluptates, repudiandae iste vero rem
         explicabo laudantium ex provident cumque officiis aperiam eligendi suscipit recusandae officia praesentium
         vitae. Unde non, officia hic aliquam at recusandae amet dicta, esse quo fugit molestias eum animi? Consectetur
         consequuntur deserunt sed unde pariatur libero doloremque ab, quae, ad nulla voluptatum. Non, dignissimos
         assumenda.</p>
+    </div>    
 </body>
+<script src="./script.js"></script>
 
 </html>
